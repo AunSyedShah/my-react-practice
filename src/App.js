@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Hello from "./Components/Hello";
+import React from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const colors = ["red", "green", "blue", "pink", "black", "silver"];
+    return (
+        <React.Fragment>
+            {
+                colors.map(
+                    function (color, index) {
+                        return <Hello username={color} key={index} text_color={color}/>;
+                    }
+                )
+            }
+        </React.Fragment>
+    );
 }
 
 export default App;
