@@ -2,7 +2,10 @@ import './Hello.css'
 
 function Hello(props) {
     return (
-        <h1 style={{color:props.text_color}}>{props.username}</h1>
+        <div>
+            <h1>Fact About Cat</h1>
+            <p>{props.fact}</p>
+        </div>
     )
 
 }
